@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>花10分钟，搭建你自己的博客 - TimFangBlog</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="https://waterblock79.github...">
+  <meta name="author" content="Tim Fang">
+  <link rel="icon" href="https://timfang.gitee.io/my-blog/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="https://timfang.gitee.io/my-blog/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="https://timfang.gitee.io/my-blog/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="https://timfang.gitee.io/my-blog/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="https://timfang.gitee.io/my-blog/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/my-blog/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.3.2/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: 'https://timfang.gitee.io/my-blog/images/theme/loading.gif'
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: 'https://api.ixiaowai.cn/api/api.php',
+          api: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          api: 'https://v1.hitokoto.cn/?encode=text&c=i',
+          data_contents: ''
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">花10分钟，搭建你自己的博客</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/my-blog/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/my-blog/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/my-blog/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/my-blog/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/my-blog/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/my-blog/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="https://timfang.gitee.io/my-blog/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">花10分钟，搭建你自己的博客</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 29, 2020</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1734</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <p><a href="https://waterblock79.github.io/2020/07/13/How%20to%20bulid%20Hexo/" target="_blank">https://waterblock79.github.io/2020/07/13/How%20to%20bulid%20Hexo/</a></p>
+<h3 id="环境配置">环境配置</h3>
+<p>在搭建Hexo之前，你需要确保有：</p>
+<ul>
+<li>
+<p>Node.js</p>
+<p>在 <a href="https://nodejs.org/zh-cn/download/" rel="noopener" target="_blank">Node.js Download</a> 下载适合你电脑系统的Node.js版本。Windows系统直接选择<strong>&ldquo;Windows安装包（.msi）&rdquo;</strong>的<strong>x64</strong>（如果你的电脑是64位系统的话）。</p>
+<p>然后打开安装的文件，一路摁<strong>Next</strong>（在第二个需要打勾同意用户协议）等待安装完成。</p>
+</li>
+<li>
+<p>Git</p>
+<p>前往<a href="https://git-scm.com/downloads" rel="noopener" target="_blank">Git Download</a>下载Git，然后安装。Windows系统直接在<a href="https://git-scm.com/download/win" rel="noopener" target="_blank">这里</a>安装。</p>
+</li>
+</ul>
+<h3 id="安装Hexo">安装Hexo</h3>
+<ol>
+<li>
+<p>hexo的安装非常简单，首先在Powershell执行：</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> npm <span style="color: #0000ff;">install -g hexo</span></pre>
+</div>
+<p>&nbsp;</p>
+</div>
+</li>
+<li>接下来找一个你喜欢的文件夹（必须是空的），进到文件夹中，摁住 <code>Shift</code> 然后右键空白区域，选择 <code>在此处打开Powershell窗口</code> ，执行：</li>
+</ol>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> hexo init</pre>
+</div>
+<h3 id="创建仓库">创建仓库</h3>
+<ul>
+<li>
+<p>你需要一个仓库来存储博客网页，那就开始创建一个Github仓库吧~</p>
+<p><strong>如果你没有Github账号，到这里去<a href="https://github.com/join" rel="noopener" target="_blank">注册</a>一个</strong></p>
+<p>好，如果你注册完了或者登录好了，那么就来访问这里：<a href="https://github.com/new" rel="noopener" target="_blank">创建新仓库</a></p>
+<p><a target="_blank" rel="noopener" href="https://i.loli.net/2020/07/14/OEaV7UfDWrokPMX.png" data-fancybox="images"><img    class="lazyload" data-original="https://i.loli.net/2020/07/14/OEaV7UfDWrokPMX.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="    /><span class="image-caption">image-20200714184530973</span></a></p>
+<p>把 <code>RepoSitory Name</code> 设为 <code>【你的用户名】.github.io</code> ，比如我叫<em>waterblock79</em>，那仓库名就应该是 <code>waterblock79.github.io</code>。</p>
+<p>填完之后就点击下面的 <code>Create repository</code> 创建仓库。</p>
+<p>接下来会跳转到仓库界面，<strong>复制并保存好这里的链接！</strong></p>
+</li>
+</ul>
+<h3 id="配置Hexo">配置Hexo</h3>
+<ol>
+<li>
+<p>现在在Powershell中执行：（别忘了替换引号里的内容~）</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> git config --global user.name <span style="color: #800000;">"</span><span style="color: #800000;">你的Github用户名</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">2</span> git config --global user.email <span style="color: #800000;">"</span><span style="color: #800000;">你注册Github使用的邮件地址</span><span style="color: #800000;"><code>"</code></span></pre>
+</div>
+</div>
+</li>
+</ol>
+<p>举个例子，就像这样：</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> git config --global user.name <span style="color: #800000;">"</span><span style="color: #800000;">waterblock79</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">2</span> git config --global user.email <span style="color: #800000;">"</span><span style="color: #800000;">waterblock79@outlook.com</span><span style="color: #800000;">"</span></pre>
+</div>
+</div>
+<p>比如：</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #000000;"># Deployment
+</span><span style="color: #008080;">2</span> ## Docs: https:<span style="color: #008000;">//</span><span style="color: #008000;">hexo.io/docs/deployment.html</span>
+<span style="color: #008080;">3</span> <span style="color: #000000;">deploy:
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">  type: git
+</span><span style="color: #008080;">5</span>   repo: https:<span style="color: #008000;">//</span><span style="color: #008000;">github.com/waterblock79/waterblock79.github.io</span>
+<span style="color: #008080;">6</span>   branch: master</pre>
+</div>
+</div>
+<h3 id="最后">最后</h3>
+<p><strong>（下面的命令需要在Hexo文件夹中执行）</strong></p>
+<p><strong>（摁住 <code>Shift</code> 然后右键空白区域，选择 <code>在此处打开Powershell窗口</code>）</strong></p>
+<ol>
+<li>
+<p>执行 <code>hexo new 【文章名】</code> 来新建文章，</p>
+<p>在你的博客文件夹的<strong>/source/_posts</strong>中编辑文章，可以使用<a href="https://typora.io/" rel="noopener" target="_blank">Typora</a>来编辑Markdown文件哦~</p>
+</li>
+<li>
+<p>要上传文章？依次执行这三个命令即可</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #000000;">hexo clean
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">hexo generate
+</span><span style="color: #008080;">3</span> hexo deploy</pre>
+</div>
+</div>
+</li>
+</ol><ol>
+<li value="2">
+<p>（有可能会弹出一个Github的登录框，输入自己的Github账号邮箱和密码即可登录）</p>
+</li>
+</ol><hr />
+<p>上传完了文章，就来看看效果吧，博客会在 <code>【你的Github名称】.github.io</code> 等着你。</p>
+<ul>
+<li>
+<p>然后回到你刚刚的文件夹，打开文件夹中的 <em>_config.yml</em> ，找到最下面的 <em># Deployment</em>，把内容改成：</p>
+<div class="hljs">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #000000;"># Deployment
+</span><span style="color: #008080;">2</span> ## Docs: https:<span style="color: #008000;">//</span><span style="color: #008000;">hexo.io/docs/deployment.html</span>
+<span style="color: #008080;">3</span> <span style="color: #000000;">deploy:
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">  type: git
+</span><span style="color: #008080;">5</span> <span style="color: #000000;">  repo: 【你刚刚创建的仓库的网址】
+</span><span style="color: #008080;">6</span>   branch: master</pre>
+</div>
+<p>&nbsp;上传完了文章，就来看看效果吧，博客会在 <code>【你的Github名称】.github.io</code> 等着你。</p>
+</div>
+</li>
+</ul>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Tim Fang</li>
+    <li><strong>本文链接：</strong><a href="https://timfang.gitee.io/my-blog/%E8%8A%B110%E5%88%86%E9%92%9F%EF%BC%8C%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/index.html" title="https:&#x2F;&#x2F;timfang.gitee.io&#x2F;my-blog&#x2F;%E8%8A%B110%E5%88%86%E9%92%9F%EF%BC%8C%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2&#x2F;index.html">https:&#x2F;&#x2F;timfang.gitee.io&#x2F;my-blog&#x2F;%E8%8A%B110%E5%88%86%E9%92%9F%EF%BC%8C%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/my-blog/%E5%85%B3%E4%BA%8EScratch%E5%AE%98%E7%BD%91%E8%A2%AB%E5%B0%81-%E6%94%AF%E6%8C%81%E5%85%AC%E6%AD%A3/"><i class="iconfont iconleft"></i>关于Scratch官网被封-支持公正</a>
+    <a href="/my-blog/Markdown%E6%8C%87%E5%8C%97/">Markdown指北<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEHexo"><span class="toc-text">配置Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1585972840 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://gitee.com/TimFang/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:mc13735292967@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/my-blog/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/my-blog/js/utils.js"></script>
+<script src="/my-blog/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
