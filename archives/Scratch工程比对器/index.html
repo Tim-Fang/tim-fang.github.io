@@ -215,7 +215,7 @@
     <div class="btn" id="comments-btn">查看评论</div>
   
   
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
 <div id="gitalk" class="gitalk"></div>
 <script defer src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
@@ -223,7 +223,7 @@
     var gitalk = new Gitalk({
       clientID: '3da9e6fcc99547e43483',
       clientSecret: '37836ebff129e1d641e3faa5228fafbd96dd8ea4',
-      id: window.location.pathname,
+      id: decodeURI('{{ page.url }}'),
       repo: 'Blog-Gitalk-TimFang4162',
       owner: 'Tim-Fang',
       admin: 'Tim-Fang'
@@ -238,6 +238,7 @@
     }
   }
 </script>
+
 
 </section>
       
