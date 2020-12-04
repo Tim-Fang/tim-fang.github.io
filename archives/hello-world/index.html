@@ -67,8 +67,8 @@
       },
       donate: {
         enable: false,
-        alipay: 'https://pic.izhaoo.com/alipay.jpg',
-        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+        alipay: '',
+        wechat: ''
       },
       galleries: {
         enable: true
@@ -156,8 +156,6 @@
       </li><li class="menu-item">
         <a href="/tags/ " class="underline "> 标签</a>
       </li><li class="menu-item">
-        <a href="/categories/ " class="underline "> 分类</a>
-      </li><li class="menu-item">
         <a href="/about/ " class="underline "> 关于</a>
       </li></ul>
     
@@ -220,6 +218,37 @@
   </nav>
 
       </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk" class="gitalk"></div>
+<script defer src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  window.onload = function () {
+    var gitalk = new Gitalk({
+      clientID: '3da9e6fcc99547e43483',
+      clientSecret: '2411dd4fec1948cb36dd12505b673d445fd8cfab',
+      id: window.location.pathname,
+      repo: 'Blog-Gitalk-TimFang4162',
+      owner: 'Tim-Fang',
+      admin: 'Tim-Fang'
+    });
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        gitalk.render('gitalk');
+      });
+    } else {
+      gitalk.render('gitalk');
+    }
+  }
+</script>
+
+</section>
       
     </section>
   </div>
