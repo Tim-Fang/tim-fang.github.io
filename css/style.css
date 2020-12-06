@@ -52,7 +52,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: var(--color-text);
-  font-family: Hiragino Sans GB;
+  font-family: 思源黑体 CN;
   background: var(--color-background) url("") fixed no-repeat;
 }
 body a {
@@ -1107,8 +1107,9 @@ body span {
   padding: 1em 0.2em;
   font-family: 'Quicksand', 'Vollkorn', serif;
   font-weight: 300;
-  color: #ddd;
+  color: #fff;
   margin: 0;
+  text-shadow: 0.1em 0.1em 0.2em #000;
 }
 @media (max-width: 768px) {
   .preview .preview-image .preview-motto,
@@ -1333,7 +1334,8 @@ body span {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .post .post-item .post-wrap .post-image img:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
+  opacity: 0.7;
 }
 .post .post-item .post-wrap .post-content {
   position: relative;
@@ -1901,7 +1903,8 @@ body span {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .galleries .wrap .item:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
+  opacity: 0.7;
 }
 .galleries .wrap .item .title-wrap,
 .galleries .wrap .item img {
@@ -1956,7 +1959,8 @@ body span {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .gallery .wrap .item:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
+  opacity: 0.7;
 }
 .gallery .wrap .item img {
   position: absolute;
