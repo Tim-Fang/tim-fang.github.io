@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="建议不要用删除注册表 IsShortcut 键值的做法...">
   <meta name="author" content="Tim Fang">
   <link rel="icon" href="https://timfang.gitee.io/images/icons/logo.png" type="image/png" sizes="16x16">
   <link rel="icon" href="https://timfang.gitee.io/images/icons/logo.png" type="image/png" sizes="32x32">
@@ -172,19 +172,34 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://cdn.mozhua.org/Media?name=" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://cdn.mozhua.org/Media?name=45e0e3ecc6f8ad78716346d54ee72018.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">Windows快捷方式优化</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>十二月 11, 2020</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>0</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>996</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        
+        <p>建议不要用删除注册表 IsShortcut 键值的做法来删除快捷方式箭头,这样会导致出现很多问题</p>
+<p>包括 Win+X 菜单打不开,右击计算机图标点击管理报错,应用无法固定到任务栏等</p>
+<p>打开注册表位置<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons</code></p>
+<p>在右侧新建<code>字符串值</code>,名称为<code>29</code>,内容为<code>C:\WINDOWS\system32\imageres.dll,197</code></p>
+<p><code>imageres.dll,197</code>这个图标是一个近似全透明的图标,但是其实并不完全空白的</p>
+<p><img   class="lazyload" data-original="https://pic2.zhimg.com/80/v2-ebb118c4e93957450edb5a92255a44c9_720w.jpg?source=1940ef5c" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>正常情况下并不影响使用,不特别注意也不会发现</p>
+<hr>
+<p>以下是批处理代码</p>
+<p>新建 txt 粘贴 后缀改 bat 确认</p>
+<p>移除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">reg add <span class="hljs-string">&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot;</span> /v 29 /d <span class="hljs-string">&quot;%systemroot%\system32\imageres.dll,197&quot;</span> /t reg_sz /f<br>taskkill /f /im explorer.exe<br>attrib -s -r -h <span class="hljs-string">&quot;%userprofile%\AppData\Local\iconcache.db&quot;</span><br>del <span class="hljs-string">&quot;%userprofile%\AppData\Local\iconcache.db&quot;</span> /f /q<br>start explorer<br>pause<br></code></pre></td></tr></table></figure>
+
+<p>恢复</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">reg delete <span class="hljs-string">&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot;</span> /v 29 /f<br>taskkill /f /im explorer.exe<br>attrib -s -r -h <span class="hljs-string">&quot;%userprofile%\AppData\Local\iconcache.db&quot;</span><br>del <span class="hljs-string">&quot;%userprofile%\AppData\Local\iconcache.db&quot;</span> /f /q<br>start explorer<br>pause<br></code></pre></td></tr></table></figure>
+
       </section>
       <section class="extra">
         
