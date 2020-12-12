@@ -1,4 +1,9 @@
-console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://github.com/izhaoo/hexo-theme-zhaoo");
+console.log(
+  "%c Github %c",
+  "background:#333333; color:#ffffff",
+  "",
+  "https://github.com/izhaoo/hexo-theme-zhaoo"
+);
 
 (function ($) {
   "use strict";
@@ -42,25 +47,31 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       }
     },
     scroolToTop: function () {
-      $('body,html').animate({
-        scrollTop: '0px'
-      }, 800);
+      $("body,html").animate(
+        {
+          scrollTop: "0px",
+        },
+        800
+      );
     },
     navbar: {
       mobile: function () {
         $(".navbar").addClass("hide");
-        $(window).on("scroll", ZHAOO.utils.throttle(function () {
-          var before = $(this).scrollTop();
-          $(window).on("scroll", function () {
-            var after = $(this).scrollTop();
-            if (before > after && after > 300) {
-              $(".navbar").removeClass("hide");
-            } else if (before < after || after < 300) {
-              $(".navbar").addClass("hide");
-            }
-            before = after;
-          })
-        }, 500));
+        $(window).on(
+          "scroll",
+          ZHAOO.utils.throttle(function () {
+            var before = $(this).scrollTop();
+            $(window).on("scroll", function () {
+              var after = $(this).scrollTop();
+              if (before > after && after > 300) {
+                $(".navbar").removeClass("hide");
+              } else if (before < after || after < 300) {
+                $(".navbar").addClass("hide");
+              }
+              before = after;
+            });
+          }, 500)
+        );
       },
       desktop: function () {
         function center() {
@@ -71,24 +82,29 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           }
         }
         center();
-        $(window).on("scroll", ZHAOO.utils.throttle(function () {
-          center();
-          var before = $(this).scrollTop();
-          $(window).on("scroll", function () {
-            var after = $(this).scrollTop();
-            if (before > after) {
-              $(".navbar").removeClass("hide");
-            } else if (before < after) {
-              $(".navbar").addClass("hide");
-            }
-            before = after;
-          })
-        }, 500));
+        $(window).on(
+          "scroll",
+          ZHAOO.utils.throttle(function () {
+            center();
+            var before = $(this).scrollTop();
+            $(window).on("scroll", function () {
+              var after = $(this).scrollTop();
+              if (before > after) {
+                $(".navbar").removeClass("hide");
+              } else if (before < after) {
+                $(".navbar").addClass("hide");
+              }
+              before = after;
+            });
+          }, 500)
+        );
       },
     },
     motto: function () {
       if (!CONFIG.preview.motto.api) return;
-      var data_contents = CONFIG.preview.motto.data_contents && JSON.parse(CONFIG.preview.motto.data_contents);
+      var data_contents =
+        CONFIG.preview.motto.data_contents &&
+        JSON.parse(CONFIG.preview.motto.data_contents);
       $.get(CONFIG.preview.motto.api, function (result) {
         if (data_contents.length > 0) {
           data_contents.forEach(function (item) {
@@ -100,22 +116,34 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     background: function () {
       if (!CONFIG.preview.background.api) return;
-      $(".preview-image").css("background-image", "url(" + CONFIG.preview.background.api + ")");
-    }
-  }
+      $(".preview-image").css(
+        "background-image",
+        "url(" + CONFIG.preview.background.api + ")"
+      );
+    },
+  };
 
   var action = {
     smoothScroll: function () {
       // a[href *=#], area[href *=#]
       $(".smooth-scroll, .toc-link").click(function () {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+        if (
+          location.pathname.replace(/^\//, "") ==
+            this.pathname.replace(/^\//, "") &&
+          location.hostname == this.hostname
+        ) {
           var $target = $(decodeURIComponent(this.hash));
-          $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
+          $target =
+            ($target.length && $target) ||
+            $("[name=" + this.hash.slice(1) + "]");
           if ($target.length) {
             var targetOffset = $target.offset().top;
-            $("html,body").animate({
-              scrollTop: targetOffset
-            }, 500);
+            $("html,body").animate(
+              {
+                scrollTop: targetOffset,
+              },
+              500
+            );
             location.hash = this.hash;
             return false;
           }
@@ -135,7 +163,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }
       });
       $(".fab-daovoice").on("click", function () {
-        daovoice('openMessages');
+        daovoice("openMessages");
       });
       $(".fab-up, .fab-daovoice, fab-tencent-chao").on("click", function () {
         fn.freezeFab();
@@ -155,7 +183,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     scroolToTop: function () {
       $(".fab-up").on("click", function () {
         fn.scroolToTop();
-      })
+      });
     },
     fancybox: function () {
       $(".fancybox").fancybox();
@@ -168,12 +196,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     pjax: function () {
       $(function () {
-        $(document).pjax("a:not(.menu *)", '#main', {
-          fragment: '#main',
-          timeout: 6000
+        $(document).pjax("a:not(.menu *)", "#main", {
+          fragment: "#main",
+          timeout: 6000,
         });
       });
-      $(document).on('pjax:complete', function () {
+      $(document).on("pjax:complete", function () {
         CONFIG.fancybox && action.fancybox();
       });
     },
@@ -181,9 +209,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".donate .icon").on("mouseover", function () {
         $("#qrcode-donate").show();
       });
-      $(".donate .icon").children("a").on("mouseover", function () {
-        $("#qrcode-donate img").attr('src', eval('CONFIG.donate.' + $(this).attr('id')))
-      });
+      $(".donate .icon")
+        .children("a")
+        .on("mouseover", function () {
+          $("#qrcode-donate img").attr(
+            "src",
+            eval("CONFIG.donate." + $(this).attr("id"))
+          );
+        });
       $(".donate .icon").on("mouseout", function () {
         $("#qrcode-donate").hide();
       });
@@ -195,22 +228,31 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       });
     },
     fixLazyloadFancybox: function () {
-      $(document).find('.article img[data-original]').each(function () {
-        $(this).parent().attr("href", $(this).attr("data-original"));
-      });
+      $(document)
+        .find(".article img[data-original]")
+        .each(function () {
+          $(this).parent().attr("href", $(this).attr("data-original"));
+        });
     },
     carrier: function () {
-      $(".j-carrier-btn").on("click", ZHAOO.utils.throttle(function () {
-        $(".j-carrier-data").select();
-        document.execCommand("Copy");
-        ZHAOO.zui.message({ text: '已复制到剪切板', type: 'success' });
-      }, 1000));
+      $(".j-carrier-btn").on(
+        "click",
+        ZHAOO.utils.throttle(function () {
+          $(".j-carrier-data").select();
+          document.execCommand("Copy");
+          ZHAOO.zui.message({ text: "已复制到剪切板", type: "success" });
+        }, 1000)
+      );
     },
     navbar: function () {
-      $(window).resize(ZHAOO.utils.throttle(function () {
-        ZHAOO.utils.isDesktop() && fn.navbar.desktop();
-        (ZHAOO.utils.isMobile() && !CONFIG.isHome) && fn.navbar.mobile();
-      }, 1000)).resize();
+      $(window)
+        .resize(
+          ZHAOO.utils.throttle(function () {
+            ZHAOO.utils.isDesktop() && fn.navbar.desktop();
+            ZHAOO.utils.isMobile() && !CONFIG.isHome && fn.navbar.mobile();
+          }, 1000)
+        )
+        .resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
         $(".navbar").addClass("hide");
@@ -229,14 +271,16 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       fn.motto();
     },
     qrcode: function () {
-      if (CONFIG.qrcode.type === 'url') {
+      if (CONFIG.qrcode.type === "url") {
         $("#qrcode-navbar").qrcode({
           text: window.location.href,
           width: 150,
-          height: 150
+          height: 150,
         });
-      } else if (CONFIG.qrcode.type === 'image') {
-        $("#qrcode-navbar").append('<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />');
+      } else if (CONFIG.qrcode.type === "image") {
+        $("#qrcode-navbar").append(
+          '<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />'
+        );
       }
     },
     toc: function () {
@@ -258,7 +302,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }
         $(".toc-link").removeClass("active");
         $(".toc-link[href='#" + current[1] + "']").addClass("active");
-      };
+      }
       f();
     },
     scrollbar: function () {
@@ -268,40 +312,56 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       function f() {
         var validH = totalH - clientH;
         var scrollH = $(document).scrollTop();
-        var height = scrollH / validH * 100;
-        $(".j-scrollbar-current").css("height", height + '%');
+        var height = (scrollH / validH) * 100;
+        $(".j-scrollbar-current").css("height", height + "%");
       }
       f();
       $(".j-scrollbar").mousedown(function (e) {
-        var scrollH = e.offsetY * totalH / 100;
+        var scrollH = (e.offsetY * totalH) / 100;
         $("html,body").animate({ scrollTop: scrollH }, 300);
         $(document).mousemove(function (e) {
-          var scrollH = (1 - ((clientH - e.clientY) / clientH)) * totalH;
+          var scrollH = (1 - (clientH - e.clientY) / clientH) * totalH;
           $("html,body").scrollTop(scrollH);
-          $("html,body").css({ "user-select": "none", "cursor": "move" });
+          $("html,body").css({ "user-select": "none", cursor: "move" });
         });
         $(document).mouseup(function () {
-          $(document).off('mousemove');
-          $("html,body").css({ "user-select": "auto", "cursor": "default" });
+          $(document).off("mousemove");
+          $("html,body").css({ "user-select": "auto", cursor: "default" });
         });
       });
     },
     notification: function () {
       if (!CONFIG.notification.list) return;
-      var page_white_list = CONFIG.notification.page_white_list && JSON.parse(CONFIG.notification.page_white_list);
-      var page_black_list = CONFIG.notification.page_black_list && JSON.parse(CONFIG.notification.page_black_list);
+      var page_white_list =
+        CONFIG.notification.page_white_list &&
+        JSON.parse(CONFIG.notification.page_white_list);
+      var page_black_list =
+        CONFIG.notification.page_black_list &&
+        JSON.parse(CONFIG.notification.page_black_list);
       var path = window.location.pathname;
-      if ((page_white_list && page_white_list.indexOf(path) < 0) || (page_black_list && page_black_list.indexOf(path) >= 0)) return;
+      if (
+        (page_white_list && page_white_list.indexOf(path) < 0) ||
+        (page_black_list && page_black_list.indexOf(path) >= 0)
+      )
+        return;
       var delay = CONFIG.notification.delay;
       var list = JSON.parse(CONFIG.notification.list);
       var playList = list.filter(function (item) {
-        return item.enable && ZHAOO.utils.isDuringDate(item.startTime, item.endTime) && item;
+        return (
+          item.enable &&
+          ZHAOO.utils.isDuringDate(item.startTime, item.endTime) &&
+          item
+        );
       });
       playList.forEach(function (item) {
-        ZHAOO.zui.notification({ title: item.title, content: item.content, delay: delay });
+        ZHAOO.zui.notification({
+          title: item.title,
+          content: item.content,
+          delay: delay,
+        });
       });
-    }
-  }
+    },
+  };
 
   $(function () {
     action.smoothScroll();
@@ -315,12 +375,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.pjax && action.pjax();
     CONFIG.lazyload.enable && action.lazyload();
     CONFIG.donate.enable && action.donate();
-    (CONFIG.lazyload && CONFIG.fancybox) && action.fixLazyloadFancybox();
+    CONFIG.lazyload && CONFIG.fancybox && action.fixLazyloadFancybox();
     CONFIG.carrier.enable && action.carrier();
     CONFIG.qrcode.enable && action.qrcode();
     CONFIG.toc.enable && action.toc();
-    CONFIG.scrollbar.model === 'simple' && action.scrollbar();
+    CONFIG.scrollbar.model === "simple" && action.scrollbar();
     CONFIG.notification.enable && action.notification();
   });
-
+  scratchblocks.renderMatching("pre.blocks", {
+    style: "scratch3",
+  });
 })(jQuery);
