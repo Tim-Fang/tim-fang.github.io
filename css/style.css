@@ -52,7 +52,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: var(--color-text);
-  font-family: 思源黑体 CN;
+  font-family: Consolas, 'Microsoft YaHei';
   background: var(--color-background) url("") fixed no-repeat;
 }
 body a {
