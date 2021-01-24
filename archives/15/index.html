@@ -257,30 +257,31 @@
         <section class="comments">
   
   
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-<div id="gitalk" class="gitalk"></div>
-<script defer src="/lib/gitalk/gitalk.js"></script>
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
   window.onload = function () {
-    var gitalk = new Gitalk({
-      clientID: '3da9e6fcc99547e43483',
-      clientSecret: '37836ebff129e1d641e3faa5228fafbd96dd8ea4',
-      id: location.pathname,
-      repo: 'Blog-Gitalk-TimFang4162',
-      owner: 'Tim-Fang',
-      admin: 'Tim-Fang'
-    });
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "csenkAv5F2RIwLDG9upKDBLv-gzGzoHsz",
+        app_key: "jH0y0jHXUlQzhKH113LRuCeB",
+        placeholder: "雁过留痕",
+        avatar: "retro",
+        pageSize: "20",
+        lang: "zh-CN",
+      });
+    }
     if ( false ) {
       $("#comments-btn").on("click", function () {
         $(this).hide();
-        gitalk.render('gitalk');
+        loadValine();
       });
     } else {
-      gitalk.render('gitalk');
+      loadValine();
     }
-  }
+  };
 </script>
-
 
 </section>
       
