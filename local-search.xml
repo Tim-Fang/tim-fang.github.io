@@ -4,25 +4,6 @@
   
   
   <entry>
-    <title>Windows升级指北</title>
-    <link href="/archives/16141/"/>
-    <url>/archives/16141/</url>
-    
-    <content type="html"><![CDATA[<h1 id="悉知"><a href="#悉知" class="headerlink" title="悉知"></a>悉知</h1><ol><li>一定要<strong>关杀毒软件</strong> !important</li><li>U盘一定要与主机紧密接触 不能接触不良</li><li>安装程序的每个选项都要看清楚</li></ol><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><ol><li><p>打开<a href="https://next.itellyou.cn/">https://next.itellyou.cn/</a></p></li><li><p>打开Windows10</p></li><li><p>建议使用-Windows 10 (consumer edition), version xxxx (updated Dec 2020) (x64) - DVD (Chinese-Simplified)-BT复制</p></li><li><p>用一个下载器下载此bt文件（such as 迅雷 and Motrix and ARIA2C）</p></li><li><p>将下载的ISO文件解压至U盘根目录</p></li><li><p>找一个空U盘（大于解压后文件大小）<br>并把U盘格式化（文件系统选NTFS）</p></li><li><p>运行U盘内setup.exe</p></li><li><p>选择接受</p></li><li><p>选择立即升级这台电脑</p></li><li><p>再点接受</p></li><li><p>选择保留个人文件和应用</p></li><li><p>点击安装</p></li><li><p>等待约1.5h</p></li></ol><h1 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h1><p><del>下次一定</del></p><iframe src="//player.bilibili.com/player.html?aid=501450066&bvid=BV1hN411o7b7&cid=289887784&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>windows</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>如何使用代理软件畅游国际互联网</title>
     <link href="/archives/13/"/>
     <url>/archives/13/</url>
@@ -96,9 +77,9 @@
     
     <tags>
       
-      <tag>Hexo</tag>
-      
       <tag>Scratch</tag>
+      
+      <tag>Hexo</tag>
       
     </tags>
     
@@ -157,9 +138,9 @@
     
     <tags>
       
-      <tag>Aerfaying</tag>
-      
       <tag>Scratch</tag>
+      
+      <tag>Aerfaying</tag>
       
     </tags>
     
@@ -197,9 +178,9 @@
     
     <tags>
       
-      <tag>Aerfaying</tag>
-      
       <tag>Scratch</tag>
+      
+      <tag>Aerfaying</tag>
       
     </tags>
     
@@ -258,9 +239,9 @@
     
     <tags>
       
-      <tag>Aerfaying</tag>
-      
       <tag>Scratch</tag>
+      
+      <tag>Aerfaying</tag>
       
     </tags>
     
@@ -279,9 +260,9 @@
     
     <tags>
       
-      <tag>Aerfaying</tag>
-      
       <tag>Scratch</tag>
+      
+      <tag>Aerfaying</tag>
       
     </tags>
     
